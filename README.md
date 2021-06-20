@@ -14,6 +14,8 @@
   </p>
 </p>
 
+<h3><p align="center">Version: 1.0 Alpha</p></h3>
+
 <h2 align="center">🖥 Install</h2>
 
 ```
