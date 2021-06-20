@@ -4,7 +4,7 @@
 
 <p align="center" ><img alt="SpamReport" src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png"></p>
 
-<h1 align="center">SpamReport (BETA)</h1>
+<h1 align="center">SpamReport (Alpha)</h1>
 <p align="center">
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Kiny-Kiny/SpamReport">
   <img alt="Latest version" src="https://img.shields.io/github/v/release/Kiny-Kiny/SpamReport.svg" alt="Latest version">
