@@ -6,8 +6,7 @@ def link():
 # https://docs.python.org/3.5/library/smtplib.html
 # http://stackoverflow.com/a/27515833/2684304
 def restart():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
+    python = sys.executable;os.execl(python, python, *sys.argv)
 
 def clear():
 	os.system("clear")
@@ -15,8 +14,7 @@ def clear():
 try:
 	import pyfiglet
 except:
-	os.system("pip install pyfiglet")
-	restart()
+	os.system("pip install pyfiglet");restart()
 result = pyfiglet.figlet_format("Kiny", font = "cosmic" );clear();print(f'''{C}{G}{result}{C}
 {C}{G}Coded By:{C} Kiny
 {C}[{R}*{C}] Ative a permissão de baixa segurança''');link();email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
