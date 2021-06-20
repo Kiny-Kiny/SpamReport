@@ -15,7 +15,38 @@ try:
 	import pyfiglet
 except:
 	os.system("pip install pyfiglet");restart()
-result = pyfiglet.figlet_format("Kiny", font = "cosmic" );clear();print(f'''{C}{G}{result}{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança''');link();email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
+result = pyfiglet.figlet_format("Kiny", font = "cosmic" );clear();print(f'''{C}{G}
+{result}
+...`
+                             .+ss+//oss:`
+                         `:oy+-       `:ss+.
+                      `/ss/`              -oyo-
+                   -+yo:                     `/ys/`
+               `:sy+.                           `:sy+.
+            `/ss/`                                  -+yo+
+           -h/                                         .ys`
+          `m-                                        -+ssdo
+          -d                                      :sdNNNNNd
+          :d                                  `/ymNNNNNNNNd
+          :d                               .+hNNNNNNNNNNNNd
+          :d                            -odNNNNNNNNNNNNNNNd
+          :d                         :sdNNNNNNNNNNNNNNNNNNd
+          :d                       +mNNNNNNNNNNNNNNNNNNNNNd
+          :d                      sNNNNNNNNNNNNNNNNNNNNNNNd
+          :d                      hNNNNNy`yyNNNNNNNNNNNNNNd
+          :d                      hNNNNh-.:sNNNNNNNNNNNNNNd
+          :d                      hNNNh`+NNNNNNNNNNNNNNNNNd
+          -d                      hNNNy  `./mNNNNNNNNNNNNNd
+          `m.                     hNNNNdyy- dNNNNNhmNNNNNNs
+           :d:                    hNNNNNmh./NNmy/-+mNNNNNy`
+            `+ys:`                hNNNh`` yNNNoodNNNNNmy:
+               `/yy/.             hNNNNmh/mNNNNNNNNdo-
+                  `:syo-          hNNNNNNNNNNNNNh+.
+                      .+ys:`      hNNNNNNNNNms/`
+                         `/sy+.   yNNNNNNdo-
+                             -oyo/+mNmy/.
+                                `-:::
+{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança''');link();email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
 if "+55 21 7918-0533" in numero:
 	exit()
 if "+55 21 79180533" in numero:
