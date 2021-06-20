@@ -15,6 +15,7 @@
 </p>
 
 <h2 align="center">🖥 Install</h2>
+
 ```
 💻Termux
 apt update -y && apt upgrade -y
