@@ -1,4 +1,3 @@
-
 global R,B,C,Y,G,RT,CY,CO
 CO='\033[m';R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';CY='\033[1;36m';Y='\033[1;33m';G='\033[1;32m';RT='\033[;0m';NO_FORMAT="\033[0m";C_GREY89="\033[38;5;254m";C_RED1="\033[48;5;196m"
 import smtplib, os, sys
@@ -11,8 +10,13 @@ def restart():
 
 def clear():
 	os.system("clear")
-
-clear();print(f'''
+	
+try:
+	import pyfiglet
+except:
+	os.system("pip install pyfiglet")
+	restart()
+result = pyfiglet.figlet_format("Kiny", font = "cosmic" );clear();print(f'''{C}{G}{result}{C}
 {C}{G}Coded By:{C} Kiny
 {C}[{R}*{C}] Ative a permissão de baixa segurança''');link();email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
 if "+55 21 7918-0533" in numero:
