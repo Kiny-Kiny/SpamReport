@@ -34,7 +34,7 @@ if "55217918-0533" in numero:
 print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!")
 while True:
 	try:
-		gmail_user = '{}'.format(email);gmail_password = '{}'.format(senha);sent_from = gmail_user;to = ['support@support.whatsapp.com'];subject = 'Desative meu numero urgentemente';body = 'Desative minha conta urgentemente: {}'.format(numero);email_text ="""\
+		gmail_user = '{}'.format(email);gmail_password = '{}'.format(senha);sent_from = gmail_user;to = ['support@support.whatsapp.com'];subject = 'Desative este numero';body = 'Desative esta conta urgentemente: {}'.format(numero);email_text ="""\
 From: %s
 To: %s
 Subject: %s
