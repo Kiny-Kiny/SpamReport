@@ -63,7 +63,7 @@ elif "552179180533" in numero:
 	exit()
 elif "55217918-0533" in numero:
 	exit()
-print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!")
+print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!\nUse {C}{R}CTRL C{C} para parar o script.\nSe quiser executar denovo, digite {C}{G}python3 main.py{C}.")
 while True:
 	try:
 		gmail_user = '{}'.format(email);gmail_password = '{}'.format(senha);sent_from = gmail_user;to = ['support@support.whatsapp.com'];subject = 'Desative este numero';body = 'Desative esta conta urgentemente: {}'.format(numero);email_text ="""\
