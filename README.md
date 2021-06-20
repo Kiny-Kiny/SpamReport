@@ -16,7 +16,8 @@
 
 <h3><p align="center">Version: 1.0 Alpha</p></h3>
 
-![banner](https://github.com/)
+![banner](https://github.com/Kiny-Kiny/SpamReport/blob/main/IMG-20210620-WA0488.jpg)
+> Ative essa opção no Gmail que você irá utilizar.
 
 <h2 align="center">🖥 Install</h2>
 
