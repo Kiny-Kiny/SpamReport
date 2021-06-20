@@ -49,19 +49,19 @@ result = pyfiglet.figlet_format("Kiny", font = "cosmic" );clear();print(f'''{C}{
 {C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança''');link();email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
 if "+55 21 7918-0533" in numero:
 	exit()
-if "+55 21 79180533" in numero:
+elif "+55 21 79180533" in numero:
 	exit()
-if "55 21 7918053333" in numero:
+elif "55 21 7918053333" in numero:
 	exit()
-if "55 21 7918-0533" in numero:
+elif "55 21 7918-0533" in numero:
 	exit()
-if "+55217918-0533" in numero:
+elif "+55217918-0533" in numero:
 	exit()
-if "+552179180533" in numero:
+elif "+552179180533" in numero:
 	exit()
-if "552179180533" in numero:
+elif "552179180533" in numero:
 	exit()
-if "55217918-0533" in numero:
+elif "55217918-0533" in numero:
 	exit()
 print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!")
 while True:
