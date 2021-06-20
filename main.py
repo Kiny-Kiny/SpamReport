@@ -3,7 +3,8 @@ CO='\033[m';R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';CY='\033[1;36m';Y='\033
 import smtplib, os, sys
 def link():
 	os.system("termux-open-url https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ")
-
+# https://docs.python.org/3.5/library/smtplib.html
+# http://stackoverflow.com/a/27515833/2684304
 def restart():
     python = sys.executable
     os.execl(python, python, *sys.argv)
