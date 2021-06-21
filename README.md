@@ -21,6 +21,8 @@
 
 <h2 align="center">🖥 Install</h2>
 
+![Tutorial de Instalação/uso](https://youtu.be/16dNoyWNjXw)
+
 ```
 💻Termux
 apt update -y && apt upgrade -y
