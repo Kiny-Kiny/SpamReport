@@ -21,7 +21,7 @@
 
 <h2 align="center">🖥 Install</h2>
 
-![Tutorial de Instalação/uso](https://youtu.be/16dNoyWNjXw)
+<a href="https://youtu.be/16dNoyWNjXw">Tutorial de Instalação/Uso(Clique Aqui)</a>
 
 ```
 💻Termux
