@@ -1,6 +1,6 @@
 import marshal, zlib, os, sys
 # sla se base64 vem pré-instala, lmfao
-#Script Name: The Masterplan
+#Script Name: Requiem
 try:
 	import base64
 except:
