@@ -1,4 +1,5 @@
 import marshal, zlib, os, sys
+# Não lembro se base64 já vem pré-instalada, lmao
 try:
 	import base64
 except:
