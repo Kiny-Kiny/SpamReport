@@ -1,12 +1,60 @@
-import marshal, zlib, os, sys
-# sla se base64 vem pré-instalada, lmfao
-# Script Name: Requiem
-# https://docs.python.org/3.5/library/smtplib.html 
-# http://stackoverflow.com/a/27515833/2684304
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+global R,B,C,Y,G,RT,CY,CO
+CO='\033[m';R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';CY='\033[1;36m';Y='\033[1;33m';G='\033[1;32m';RT='\033[;0m';NO_FORMAT="\033[0m";C_GREY89="\033[38;5;254m";C_RED1="\033[48;5;196m"
+import smtplib, os, sys, time, ssl
+def link():
+	os.system("termux-open-url https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ")
+
+def restart():
+    python = sys.executable;os.execl(python, python, *sys.argv)
+
+def clear():
+	os.system("clear")
+	
 try:
-	import base64
+	import pyfiglet
 except:
-	os.system("pip install base64")
-	import base64
-b = (base64.b64decode('''Z2xvYmFsIFIsQixDLFksRyxSVCxDWSxDTwpDTz0nXDAzM1ttJztSPSdcMDMzWzE7MzFtJztCPSdcMDMzWzE7MzRtJztDPSdcMDMzWzE7MzdtJztDWT0nXDAzM1sxOzM2bSc7WT0nXDAzM1sxOzMzbSc7Rz0nXDAzM1sxOzMybSc7UlQ9J1wwMzNbOzBtJztOT19GT1JNQVQ9IlwwMzNbMG0iO0NfR1JFWTg5PSJcMDMzWzM4OzU7MjU0bSI7Q19SRUQxPSJcMDMzWzQ4OzU7MTk2bSIKaW1wb3J0IHNtdHBsaWIsIG9zLCBzeXMsIHRpbWUKZGVmIGxpbmsoKToKCW9zLnN5c3RlbSgidGVybXV4LW9wZW4tdXJsIGh0dHBzOi8vbXlhY2NvdW50Lmdvb2dsZS5jb20vbGVzc3NlY3VyZWFwcHM/cGxpPTEmcmFwdD1BRWpITDRPU2dnallPZ3Q4ZzhIYmdTVTU4THBVcVE1R3NENjNpcEVOcWE4NFllZ01IaW9ucXF2SVhNTW9jNGJxdS1DMEdIME4tLUthbF9BRnBkNXJSSll5TzBnLXkxQWJFUSIpCgpkZWYgcmVzdGFydCgpOgogICAgcHl0aG9uID0gc3lzLmV4ZWN1dGFibGU7b3MuZXhlY2wocHl0aG9uLCBweXRob24sICpzeXMuYXJndikKCmRlZiBjbGVhcigpOgoJb3Muc3lzdGVtKCJjbGVhciIpCgkKdHJ5OgoJaW1wb3J0IHB5ZmlnbGV0CmV4Y2VwdDoKCW9zLnN5c3RlbSgicGlwIGluc3RhbGwgcHlmaWdsZXQiKTtyZXN0YXJ0KCkKcmVzdWx0ID0gcHlmaWdsZXQuZmlnbGV0X2Zvcm1hdCgiUiBlIHEgdSBpIGUgbSIsIGZvbnQgPSAiY29zbWljIiApO2NsZWFyKCk7cHJpbnQoZicnJ3tDfXtHfQp7cmVzdWx0fQouLi5gCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLitzcysvL29zczpgCiAgICAgICAgICAgICAgICAgICAgICAgICBgOm95Ky0gICAgICAgYDpzcysuCiAgICAgICAgICAgICAgICAgICAgICBgL3NzL2AgICAgICAgICAgICAgIC1veW8tCiAgICAgICAgICAgICAgICAgICAtK3lvOiAgICAgICAgICAgICAgICAgICAgIGAveXMvYAogICAgICAgICAgICAgICBgOnN5Ky4gICAgICAgICAgICAgICAgICAgICAgICAgICBgOnN5Ky4KICAgICAgICAgICAgYC9zcy9gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC0reW8rCiAgICAgICAgICAgLWgvICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAueXNgCiAgICAgICAgICBgbS0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLStzc2RvCiAgICAgICAgICAtZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOnNkTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBgL3ltTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAuK2hOTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAtb2ROTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICA6c2ROTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgK21OTk5OTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBzTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OTk55YHl5Tk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OTmgtLjpzTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OaGArTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICAtZCAgICAgICAgICAgICAgICAgICAgICBoTk5OeSAgYC4vbU5OTk5OTk5OTk5OTk5kCiAgICAgICAgICBgbS4gICAgICAgICAgICAgICAgICAgICBoTk5OTmR5eS0gZE5OTk5OaG1OTk5OTk5zCiAgICAgICAgICAgOmQ6ICAgICAgICAgICAgICAgICAgICBoTk5OTk5taC4vTk5teS8tK21OTk5OTnlgCiAgICAgICAgICAgIGAreXM6YCAgICAgICAgICAgICAgICBoTk5OaGBgIHlOTk5vb2ROTk5OTm15OgogICAgICAgICAgICAgICBgL3l5Ly4gICAgICAgICAgICAgaE5OTk5taC9tTk5OTk5OTk5kby0KICAgICAgICAgICAgICAgICAgYDpzeW8tICAgICAgICAgIGhOTk5OTk5OTk5OTk5OaCsuCiAgICAgICAgICAgICAgICAgICAgICAuK3lzOmAgICAgICBoTk5OTk5OTk5ObXMvYAogICAgICAgICAgICAgICAgICAgICAgICAgYC9zeSsuICAgeU5OTk5OTmRvLQogICAgICAgICAgICAgICAgICAgICAgICAgICAgIC1veW8vK21ObXkvLgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGAtOjo6CntDfVxue0N9e0d9Q29kZWQgQnk6e0N9IEtpbnlcbntDfVt7Un0qe0N9XSBBdGl2ZSBhIHBlcm1pc3PDo28gZGUgYmFpeGEgc2VndXJhbsOnYSBlIHV0aWxpemUgdW0gZW1haWwgcG9yIGF0YXF1ZShyZWNvbWVuZGHDp8OjbyknJycpO2xpbmsoKTtzdXMgPSBpbnB1dChmIlxue0N9e1l9TydxdWUgZGVzZWphIGZhemVyP3tDfVxue0N9W3tHfTF7Q31dIERlc2F0aXZhciBudW1lcm9cbntDfVt7Un0we0N9XSBTYWlyXG57Q31be0d9RGlnaXRlIGEgb3DDp8Ojb3tDfV06ICIpCmlmIHN1cyA9PSAnMSc6CgllbWFpbCA9IGlucHV0KGYne0N9W3tZfUdtYWlse0N9XTogJyk7c2VuaGEgPSBpbnB1dChmJ3tDfVt7WX1TZW5oYSAoTsOjbyBzZSBwcmVvY3VwZSwgbsOjbyB0ZW1vcyBhY2Vzc28gw6Agc3VhIHNlbmhhKXtDfV06ICcpO251bWVybyA9IGlucHV0KGYne0N9W3tZfU51bWVybyBkbyBBbHZvIChleDogNTUgMjEgOSoqKioqKioqKXtDfV06ICcpCglpZiAiKzU1IDIxIDc5MTgtMDUzMyIgaW4gbnVtZXJvOgoJCWV4aXQoKQoJZWxpZiAiKzU1IDIxIDc5MTgwNTMzIiBpbiBudW1lcm86CgkJZXhpdCgpCgllbGlmICI1NSAyMSA3OTE4MDUzMzMzIiBpbiBudW1lcm86CgkJZXhpdCgpCgllbGlmICI1NSAyMSA3OTE4LTA1MzMiIGluIG51bWVybzoKCQlleGl0KCkKCWVsaWYgIis1NTIxNzkxOC0wNTMzIiBpbiBudW1lcm86CgkJZXhpdCgpCgllbGlmICIrNTUyMTc5MTgwNTMzIiBpbiBudW1lcm86CgkJZXhpdCgpCgllbGlmICI1NTIxNzkxODA1MzMiIGluIG51bWVybzoKCQlleGl0KCkKCWVsaWYgIjU1MjE3OTE4LTA1MzMiIGluIG51bWVybzoKCQlleGl0KCkKCXByaW50KGYie0N9W3tSfSp7Q31dIEVOVklBTkRPIERFTsOaTkNJQVMhXG5Vc2Uge0N9e1J9Q1RSTCBDe0N9IHBhcmEgcGFyYXIgbyBzY3JpcHQuXG57Q31be1l9QXZpc297Q31dIFNlIG8gU3Vwb3J0ZSBwZWRpciB2ZXJpZmljYcOnw6NvLCBkZW51bmNpZSBvIG7Dum1lcm8gbWFudWFsbWVudGUob3DDp2FvIGRlIERlbnVuY2lhciBDb250YXRvKSBlIGRlcG9pcyBmYcOnYSBvIFNQQU0gbm92YW1lbnRlIHVzYW5kbyBvdXRybyBlbWFpbC4iKQoJd2hpbGUgVHJ1ZToKCQl0cnk6CgkJCWdtYWlsX3VzZXIgPSAne30nLmZvcm1hdChlbWFpbCk7Z21haWxfcGFzc3dvcmQgPSAne30nLmZvcm1hdChzZW5oYSk7c2VudF9mcm9tID0gZ21haWxfdXNlcjt0byA9IFsnc3VwcG9ydEBzdXBwb3J0LndoYXRzYXBwLmNvbSddO3N1YmplY3QgPSAnRGVzYXRpdmUgZXN0ZSBudW1lcm8nO2JvZHkgPSAnRGVzYXRpdmUgZXN0YSBjb250YSB1cmdlbnRlbWVudGU6IHt9Jy5mb3JtYXQobnVtZXJvKTtlbWFpbF90ZXh0ID0iIiJcCkZyb206ICVzClRvOiAlcwpTdWJqZWN0OiAlcwolcwoJCSIiIiAlIChzZW50X2Zyb20sICIsICIuam9pbih0byksIHN1YmplY3QsIGJvZHkpO3NlcnZlciA9IHNtdHBsaWIuU01UUF9TU0woJ3NtdHAuZ21haWwuY29tJywgNDY1KTtzZXJ2ZXIuZWhsbygpO3NlcnZlci5sb2dpbihnbWFpbF91c2VyLCBnbWFpbF9wYXNzd29yZCk7c2VydmVyLnNlbmRtYWlsKHNlbnRfZnJvbSwgdG8sIGVtYWlsX3RleHQpO3NlcnZlci5jbG9zZSgpCgkJZXhjZXB0OgoJCQlwcmludChmIntDfVt7Un1FUlJPUntDfV0gUGVybWlzc2FvIG5hbyBnYXJhbnRpZGEgb3Ugc2VuaGEgZSBlbWFpbCBpbnZhbGlkbyhzKS4iKTt0aW1lLnNsZWVwKDUpO3Jlc3RhcnQoKQoJCmVsaWYgc3VzID09ICcwJzoKCXByaW50KGYie0N9e1J9QWRldXN7Q30iKTtleGl0KCkKCmVsc2U6CglyZXN0YXJ0KCk='''))
-exec(b)
+	os.system("pip install pyfiglet");restart()
+result = pyfiglet.figlet_format("R e q u i e m", font = "cosmic" );clear();print(f'''{C}{G}
+{result}
+...`
+                             .+ss+//oss:`
+                         `:oy+-       `:ss+.
+                      `/ss/`              -oyo-
+                   -+yo:                     `/ys/`
+               `:sy+.                           `:sy+.
+            `/ss/`                                  -+yo+
+           -h/                                         .ys`
+          `m-                                        -+ssdo
+          -d                                      :sdNNNNNd
+          :d                                  `/ymNNNNNNNNd
+          :d                               .+hNNNNNNNNNNNNd
+          :d                            -odNNNNNNNNNNNNNNNd
+          :d                         :sdNNNNNNNNNNNNNNNNNNd
+          :d                       +mNNNNNNNNNNNNNNNNNNNNNd
+          :d                      sNNNNNNNNNNNNNNNNNNNNNNNd
+          :d                      hNNNNNy`yyNNNNNNNNNNNNNNd
+          :d                      hNNNNh-.:sNNNNNNNNNNNNNNd
+          :d                      hNNNh`+NNNNNNNNNNNNNNNNNd
+          -d                      hNNNy  `./mNNNNNNNNNNNNNd
+          `m.                     hNNNNdyy- dNNNNNhmNNNNNNs
+           :d:                    hNNNNNmh./NNmy/-+mNNNNNy`
+            `+ys:`                hNNNh`` yNNNoodNNNNNmy:
+               `/yy/.             hNNNNmh/mNNNNNNNNdo-
+                  `:syo-          hNNNNNNNNNNNNNh+.
+                      .+ys:`      hNNNNNNNNNms/`
+                         `/sy+.   yNNNNNNdo-
+                             -oyo/+mNmy/.
+                                `-:::
+{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança e utilize um email por ataque(recomendação)\n{C}Modo: {G}Menu{C}''');link();sus = input(f"\n{C}{Y}O'que deseja fazer?{C}\n{C}[{G}1{C}] Desativar Numero\n{C}[{G}2{C}] Retirar do Contador\n{C}[{G}3{C}] Retirar Banimento{C}[{R}0{C}] Sair\n{C}[{G}Digite a opção{C}]: ")
+if sus == '1':
+	os.system('python3 spa.py')
+elif sus == '2':
+	os.system('python3 conta.py')
+elif sus == '3':
+	os.system('python3 ban.py')
+elif sus == '0':
+	print(f"{C}{R}Adeus{C}");exit()
+else:
+	restart()
