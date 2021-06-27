@@ -47,7 +47,7 @@ result = pyfiglet.figlet_format("R e q u i e m", font = "cosmic" );clear();print
                          `/sy+.   yNNNNNNdo-
                              -oyo/+mNmy/.
                                 `-:::
-{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança e utilize um email por ataque(recomendação)\n{C}Modo: {G}Menu{C}''');link();sus = input(f"\n{C}{Y}O'que deseja fazer?{C}\n{C}[{G}1{C}] Desativar Numero\n{C}[{G}2{C}] Retirar do Contador\n{C}[{G}3{C}] Retirar Banimento{C}[{R}0{C}] Sair\n{C}[{G}Digite a opção{C}]: ")
+{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança e utilize um email por ataque(recomendação)\n{C}Modo: {G}Menu{C}''');link();sus = input(f"\n{C}{Y}O'que deseja fazer?{C}\n{C}[{G}1{C}] Desativar Numero\n{C}[{G}2{C}] Retirar do Contador\n{C}[{G}3{C}] Retirar Banimento\n{C}[{R}0{C}] Sair\n{C}[{G}Digite a opção{C}]: ")
 if sus == '1':
 	os.system('python3 spa.py')
 elif sus == '2':
