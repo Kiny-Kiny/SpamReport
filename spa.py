@@ -60,7 +60,7 @@ elif "552179180533" in numero:
 	exit()
 elif "55217918-0533" in numero:
 	exit()
-print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!\nUse {C}{R}CTRL C{C} para parar o script.\n{C}[{Y}Aviso{C}] Se o Suporte pedir verificação, denuncie o número manualmente(opçao de Denunciar Contato) e depois faça o SPAM novamente usando outro email.")
+print(f"{C}[{R}*{C}] ENVIANDO DENÚNCIAS!\nUse {C}{R}CTRL C{C} para parar o script e {C}{G}python main.py{C} para reiniciar.\n{C}[{Y}Aviso{C}] Se o Suporte pedir verificação, denuncie o número manualmente(opçao de Denunciar Contato) e depois faça o SPAM novamente usando outro email.")
 while True:
 	try:
 		gmail_user = '{}'.format(email);gmail_password = '{}'.format(senha);sent_from = gmail_user;to = ['support@support.whatsapp.com'];subject = 'Desativem este numero';body = 'Desativem esta conta urgentemente: {}'.format(numero);email_text ="""\
