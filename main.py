@@ -3,8 +3,6 @@ import marshal, zlib, os, sys
 # Script Name: Requiem
 # https://docs.python.org/3.5/library/smtplib.html 
 # http://stackoverflow.com/a/27515833/2684304
-# A simple Python program to demonstrate 
-# getpass.getpass() to read security question
 try:
 	import base64
 except:
