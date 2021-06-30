@@ -3,14 +3,6 @@ import os, sys, time
 # Script Name: Requiem
 # https://docs.python.org/3.5/library/smtplib.html 
 # http://stackoverflow.com/a/27515833/2684304
-def restart():
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
-if __name__ == '__main__':
-    os.system('clear')
-    print(f'{C}[{G}!{C}] Checando Atualizações')
-    run(["git", "pull"])
-    system('clear')
-    print(b.banner)
-    time.sleep(2)
+print(f'{C}[{G}Coded By{C}]: Kiny')
+time.sleep(2)
 os.system('python3 encrypt_sx.cpython-39.pyc')
