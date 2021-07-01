@@ -6,4 +6,4 @@ import os, sys, time
 os.system('clear')
 print(f'{C}[{G}Coded By{C}]: Kiny')
 time.sleep(2)
-os.system('python3 encrypt_sx.cpython-39.pyc')
+os.system('python3 encrypt_234.cpython-39.pyc')
