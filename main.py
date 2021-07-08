@@ -1,8 +1,6 @@
 import marshal, zlib, os, sys
 # sla se base64 vem pré-instalada, lmfao
-# Script Name: Requiem
-# https://docs.python.org/3.5/library/smtplib.html 
-# http://stackoverflow.com/a/27515833/2684304
+# só coloquei base64 pra evitar que uns "coder" kibem
 try:
 	import base64
 except:
