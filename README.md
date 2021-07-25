@@ -31,7 +31,7 @@
 ```
 💻Termux
 apt update && apt upgrade -y
-apt install git python -y
+apt install git python figlet -y
 git clone https://github.com/Kiny-Kiny/SpamReport
 cd SpamReport
 python3 main.py
