@@ -1,2 +1,2 @@
-import os
-os.system('pytthon3 ui.pyc')
+#!/usr/bin/python
+import ui
