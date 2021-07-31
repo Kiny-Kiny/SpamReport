@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #Fiz esse script porque um amigo pediu :P
 import webbrowser,os, sys, time,platform, subprocess, getpass,smtplib, email.message, imaplib, email, ssl
 clean = ("cls" if os.name == "nt" else "clear")
