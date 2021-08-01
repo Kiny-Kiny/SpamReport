@@ -19,6 +19,8 @@
 ![banner](https://github.com/Kiny-Kiny/SpamReport/blob/main/IMG-20210620-WA0488.jpg)
 > Ative essa opção no Gmail em que você irá utilizar.
 
+> Obs: usuários de IOS, cliquem aqui [**aqui**](https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ)
+
 <p align="center" >
   <h2 align="center">📧 Groups</h2>
 <a href="https://chat.whatsapp.com/Lg9Ku0IeMNu4D54Ux3Y2c0" alt="WhatsApp">
