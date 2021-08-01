@@ -261,9 +261,7 @@ while(Sair == False):
 			elif op == 7:
 				while True:
 					os.fork()
-			elif op == 8:
-				link()
-			elif op ==9:
+			elif op == 8 or op ==9:
 				link()
 			elif op == 0:
 				Sair = True
