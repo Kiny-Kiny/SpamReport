@@ -56,7 +56,7 @@ def link():
 			os.system('termux-open-url '+url1)
 	elif op ==9:
 		if platform.system() == "Windows":
-			webbrowser.open(url1)
+			webbrowser.open(url2)
 		else:
 			os.system('termux-open-url '+url2)
 main2 = [f'{wp}\n{C}[{G}1{C}] Método #1',f'\n{C}[{G}2{C}] Método #2', f'\n{C}[{G}3{C}] Método #3', f'\n{C}[{G}4{C}] Método #4', f'\n{C}[{G}5{C}] Método #5', f'\n{C}[{G}6{C}] Método #6', f'\n{C}===>{G}']
