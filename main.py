@@ -125,7 +125,7 @@ def init():
 	   				    	else:
 	   				    		mail_content = message.get_payload()
 	   				    	if 'support@support.whatsapp.com' in mail_from:
-	   				    		pass
+	   				    		restart()
 	   			##############################
 	except Exception as erro:
 		print(f"{error} Verifique se a opção de 'Apps menos seguros' foi ativada ou se você inseriu o email/senha corretamente.\n{warning}: "+str(erro));time.sleep(5)
