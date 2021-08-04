@@ -231,7 +231,7 @@ while(Sair == False):
 				link()
 			elif op == 0:
 				Sair = True
-			if op == None:
+			elif op == None:
 				pass
 		except Exception as error:
 			clear();print(erro1);time.sleep(4)
