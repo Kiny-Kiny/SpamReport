@@ -214,7 +214,7 @@ while(Sair == False):
 					clear();print(wp, f'{C}Modo:{R} Derrubar Blindagem{C}\n');titulo = title['title13'];bd=text['text13']
 				elif op == 6:
 					clear();op2 = int(input(main2[0]+main2[1]+main2[6]))
-					if op == 2:
+					if op2 == 1:
 						clear();print(wp, f'{C}Modo:{G} Blindar Número{C}\n');titulo = title['title14'];bd=text['text14']
 					elif op2 == 2:
 						clear();print(wp, f'{C}Modo:{G} Blindar Número{C}\n');titulo = title['title15'];bd=text['text15']
