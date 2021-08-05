@@ -35,7 +35,7 @@ try:
 	os.system('apt install figlet')
 except:
 		os.system('pacman -Sy figlet')
-wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny{C}\n{info} Twitter: @KinyBruno\n{info} Github: {G}https://github.com/Kiny-Kiny\n{info} Agradecimento(s): {G}Rei Pato\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{C}=================='''
+wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny\n{info} Twitter: {G}@KinyBruno\n{info} Github: {G}https://github.com/Kiny-Kiny\n{info} Agradecimento(s): {G}Rei Pato\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{C}=================='''
 main = f'''
 {wp}\n{C}[{G}1{C}] Desativar Numero
 {C}[{G}2{C}] Retirar do Contador
