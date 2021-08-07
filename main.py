@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #Fiz esse script porque um amigo pediu :P
-import webbrowser,os, sys, time,platform, subprocess, getpass,smtplib, email.message, imaplib, email, ssl
+import webbrowser,os, sys, time,platform, subprocess,smtplib, email.message, imaplib, email, ssl
 clean = ("cls" if os.name == "nt" else "clear")
 def clear():
 	os.system(clean)
@@ -68,7 +68,7 @@ inp = f'''{C}===>{G} '''
 error = f'{C}[{R}ERROR{C}]';warning = f'{C}[{Y}!{C}]';info = f'{C}[{G}i{C}]'
 block_num = ["+55 21 7918-0533","+55 21 79180533","55 21 7918053333","55 21 7918-0533","+55217918-0533","+552179180533","552179180533","55217918-0533"]
 def init():
-	gmail=input(f'{C}[{Y}Gmail{C}]: ');senha=getpass.getpass(prompt=f'{C}[{Y}Senha{C}]: ')
+	gmail=input(f'{C}[{Y}Gmail{C}]: ');senha=input(f'{C}[{Y}Senha{C}]: ')
 	login = {
 	'log1':f'{gmail}',
 	'log2':f'{senha}',
