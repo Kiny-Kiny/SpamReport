@@ -35,7 +35,7 @@ try:
 	os.system('apt install figlet')
 except:
 		os.system('pacman -Sy figlet')
-wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny\n{info} Twitter: {G}@KinyBruno\n{info} Github: {G}https://github.com/Kiny-Kiny\n{info} Agradecimento(s): {G}Rei Pato\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{C}=================='''
+wp = f'''{result}\n{C}__ {G}Hello World!{C} __\n{C}==================\n{info} Coded By: {G}Kiny\n{info} Twitter: {G}@KinyBruno\n{info} Github: {G}https://github.com/Kiny-Kiny\n{info} Agradecimento(s): {G}Rei Pato\n{warning} Lembre-se de ativar a opção de 'Apps menos seguros' na conta que for utilizar {warning}\n{info} Grupo do WhatsApp: {G}https://chat.whatsapp.com/JFQmQ4QJtXR8VenQ2fIaAi\n{info} Grupo do Telegram: {G}https://t.me/kinycrimson\n{info} Grupo de Avisos: {G}https://t.me/kinycrimsonXD\n{info} Twitter: {G}@KinyBruno\n{info} Contato: {G}+55 (21) 7918-0533\n{info} Discord: {G}https://discord.gg/3EJTadHAFR\n{info} Pix: {G}(61) 9603-5417\n{C}=================='''
 main = f'''
 {wp}\n{C}[{G}1{C}] Desativar Numero
 {C}[{G}2{C}] Retirar do Contador
