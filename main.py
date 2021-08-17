@@ -68,7 +68,7 @@ inp = f'''{C}===>{G} '''
 error = f'{C}[{R}ERROR{C}]';warning = f'{C}[{Y}!{C}]';info = f'{C}[{G}i{C}]'
 block_num = ["+55 21 7918-0533","+55 21 79180533","55 21 7918053333","55 21 7918-0533","+55217918-0533","+552179180533","552179180533","55217918-0533"]
 def init():
-	gmail=input(f'{C}[{Y}Gmail{C}]: ');senha=input(f'{C}[{Y}Senha{C}]: ')
+	gmail=input(f'{C}[{Y}Gmail{C}]: ');senha=input(f'{C}[{Y}Senha{C}]: ');conti=input(f'{C}[{Y}Quantidade de emails{C}]: ')
 	login = {
 	'log1':f'{gmail}',
 	'log2':f'{senha}',
@@ -76,7 +76,7 @@ def init():
 	'server':'smtp.gmail.com',
 	}
 	try:
-		   	while True:
+		   	while (conti > 0):
 		   		##############################
 	   			msg = email.message.Message()
 	   			msg['Subject'] = titulo
@@ -90,6 +90,9 @@ def init():
 	   			s.starttls()
 	   			s.login(msg['From'], login['log2'])
 	   			s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
+	   			print(f'{C}[{G}i{C} Email enviado com sucesso!')
+	   			conti=conti-1
+	   		print(f'{C}[{G}i{C}] Concluído! Espere a resposta do suporte.')
 	   			##############################
 	except Exception as erro:
 		print(f"{error} Verifique se a opção de 'Apps menos seguros' foi ativada ou se você inseriu o email/senha corretamente.\n{warning}: "+str(erro));time.sleep(5)
