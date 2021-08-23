@@ -45,7 +45,7 @@ main = f'''
 {C}[{G}6{C}] Blindar Número
 {C}[{G}7{C}] {R}???{C}
 ==================
-{C}[{G}8{C}] Liberar Permissão
+{C}[{G}8{C}] Liberar Permissão de Apps menos seguros
 {C}[{G}9{C}] Grupo do WhatsApp
 {C}[{G}0{C}] Sair
 {C}===> {G}'''
