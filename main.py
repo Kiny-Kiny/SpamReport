@@ -30,7 +30,7 @@ def main():
 		op = input('''%s- %sDiscord%s  : kine azul#3189
 - %sYoutube%s  : https://youtube.com/c/reKINYCRIMSONLOL
 - %sTelegram%s : @K_iny
-- %sWhatsApp%s : +55 21 7918-0533\n\n[%s 1 %s] Banir número    %s|%s Ban number\n[%s 2 %s] Desbanir número %s|%s Unban number\n[%s 0 %s] Sair            %s|%s Exit\n%s===> %s'''%(logo,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco))
+- %sWhatsApp%s : +55 21 7918-0533\n\n[%s 1 %s] Banir número    %s|%s Ban number\n[%s 2 %s] Desbanir número %s|%s Unban number\n[%s 0 %s] Sair            %s|%s Exit\n%s===> %s'''%(logo,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco,Azul,Branco))
 		if op in ['0']:
 			break
 		#Caso queira adicionar uma nova opção, coloque uma nova string na condicional abaixo.
