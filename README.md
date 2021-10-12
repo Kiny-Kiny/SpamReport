@@ -32,8 +32,8 @@
 
 <a href="https://youtu.be/16dNoyWNjXw">Tutorial de Instalação/Uso(Clique Aqui)</a>
 
-```
-📱iSH
+## 📱iSH
+```sh
 apk update
 apk upgrade
 apk add git
@@ -44,8 +44,10 @@ git clone https://github.com/Kiny-Kiny/SpamReport
 cd SpamReport
 python3 -m ensurepip --default-pip
 python3 main.py
+```
 
-💻Termux
+## 💻Termux
+```sh
 apt update && apt upgrade -y
 apt install git python -y
 git clone https://github.com/Kiny-Kiny/SpamReport
