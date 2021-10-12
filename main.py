@@ -35,7 +35,7 @@ def main():
 			break
 		#Caso queira adicionar uma nova opção, coloque uma nova string na condicional abaixo.
 		elif op in ['1','2']:
-			open('https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ')
+			open('https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ');system('termux-open-url https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ')
 			try:
 				numero=str(input('%s[%s Número %s|%s Number %s] - %s'%(Azul,Branco,Azul,Branco,Azul,Branco)))
 		#Aqui você pode colocar um novo texto ou alterar um já existente.
