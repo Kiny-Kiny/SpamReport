@@ -38,14 +38,15 @@ def main():
 			open('https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ');system('termux-open-url https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OSggjYOgt8g8HbgSU58LpUqQ5GsD63ipENqa84YegMHionqqvIXMMoc4bqu-C0GH0N--Kal_AFpd5rRJYyO0g-y1AbEQ')
 			try:
 				numero=str(input('%s[%s Número %s|%s Number %s] - %s'%(Azul,Branco,Azul,Branco,Azul,Branco)))
-		#Aqui você pode colocar um novo texto ou alterar um já existente.
+		                #Aqui você pode colocar um novo texto ou alterar um já existente.
 				op={
 				'1':'Desative este número|Estou solicitando a desativação temporária da minha conta no whatsapp, meu numero: %s'%numero,
 				'2':'Meu número foi banido injustamente|Nossa! Eu estou trabalhando e de repente meu número foi banido, eu não sei o quê aconteceu, preciso do meu número pois é do trabalho, eu preciso atender meus clientes. Meu número: %s'%numero
 				}[op]
 				gmail=str(input('%s[ %sGmail%s ] -%s '%(Azul,Branco,Azul,Branco)))
 				password=str(input('%s[%s Senha %s|%s Password %s] - %s' %(Azul,Branco,Azul,Branco,Azul,Branco)))
-				for _ in range(0,1000):
+                                # Caso queira mudar a quantidade de mensagens que serão enviadas, altere no range
+				for _ in range(1):
 					Thread(init(gmail, password, op.split('|')[0],op.split('|')[1])).start()
 			except:
 				pass
