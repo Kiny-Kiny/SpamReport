@@ -46,7 +46,7 @@ def main():
 				password=str(input('%s[%s Senha %s|%s Password %s] - %s' %(Azul,Branco,Azul,Branco,Azul,Branco)))
                                 # Caso queira mudar a quantidade de mensagens que serão enviadas, altere no range
 				for _ in range(1):
-					Thread(init(gmail, password, op.split('|')[0],op.split('|')[1])).start()
+					Thread(target = init, args = (gmail, password, op.split('|')[0],op.split('|')[1])).start()
 			except:
 				pass
 	system('cls||clear')
